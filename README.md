@@ -26,6 +26,7 @@
 | `sigmoid` | Sigmoid  |
 | `Upsample` | Upsample layers |
 | `doubleConv` | 2 x [Convolutional layers 2D, Batch Normalization 2D, ReLU] |
-| `Upsample` | Upsample layers |
-| `Upsample` | Upsample layers |
-| `Upsample` | Upsample layers |
+| `ElbowUnet` | 2 x [Convolutional layers 2D, Batch Normalization 2D, ReLU] with out_channels influenced by bilinear of None upsampling |
+| `UpDoubleConv` | 2 x [Convolutional layers 2D, Batch Normalization 2D, ReLU] with out_channels influenced by bilinear of None upsampling |
+| `UpDoubleConv_out` | UpDoubleConv layers that terminate the architecture |
+| `output` | dense layers that terminate the architecture |
