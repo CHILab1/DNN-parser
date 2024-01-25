@@ -9,8 +9,11 @@ The structure of the configuration json is very simple and requires the followin
 
 
 |JSON key |Value| Description|
-| :---:   | :---: | : ---: |
+| :---:   | :---: | :---: |
 | `input_shape` | aaa| a nested |
+| `architecture` | aaa| a nested |
+
+
 
 
 <details>  
