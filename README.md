@@ -1,7 +1,7 @@
 # DNN-parser
-DNN parser is a tool that allows deep neural networks to be instantiated in both tensorflow and pytorch from a configuration json file. 
+DNN parser is a tool that allows deep neural networks to be instantiated in both tensorflow and pytorch framework from a configuration json file. 
 <br>The simplicity of this approach makes the creation of DNNs for training accessible to all. 
-<br>The proposed version is still being developed and updated, but it allows the instance of the neural network to be created without any problem. 
+<br>The proposed version is still being developed and updated, but it allows the instance of the neural network to be created without any problem.
 <br><br>The following sections will describe the organisation of the json to be submitted to the parser, as well as a summary of the codes describing each layer. 
 
 ## Json structure
@@ -131,3 +131,11 @@ The structure of the configuration json is very simple and requires the followin
 | `UpDoubleConv` | 2 x [Convolutional layers 2D, Batch Normalization 2D, ReLU] with out_channels influenced by bilinear of None upsampling |
 | `UpDoubleConv_out` | UpDoubleConv layers that terminate the architecture |
 | `output` | dense layers that terminate the architecture |
+
+
+## Run parser 
+The executable file for the parser can be downloaded from 
+
+The following parameters must be used to execute it 
+
+
