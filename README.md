@@ -7,14 +7,29 @@ DNN parser is a tool that allows deep neural networks to be instantiated in both
 ## Json structure
 The structure of the configuration json is very simple and requires the following keys <br>
 
+<ul>
+  <il>`input_shape`</il><br>
+  <il>`architecture`</il><br>
+  <il>`data_format`</il><br>
+</ul>
 
-|JSON key |Value| Description|
-| :---:   | :---: | :---: |
-| `input_shape` | aaa| a nested |
-| `architecture` | aaa| a nested |
+To the sections listed above (mandatory) the following tags can be added as separate sections. 
+<ul>
+  <il>`convolutional`</il><br>
+  <il>`kernel`</il><br>
+  <il>`pooling`</il><br>
+  <il>`padding`</il><br>
+  <il>`padding_conv`</il><br>
+</ul>
+These are necessary if we have Convolutional or Dense layers contained within the key:value architecture group 
 
+An additional tag may also be added. 
+<ul>
+  <il>`skip_connection`</il><br>
+</ul>
+If skip connections are present in the network we have constructed. The structure of this section provides a reference to the numbering of the architecture section. In fact, skip connections involve the connection between one source layer and one target layer. For this reason, the key:value pair, reports the values of the keys that the layer pair has in the architecture section.
 
-
+<br>
 
 <details>  
 
