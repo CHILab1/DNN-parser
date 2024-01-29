@@ -4,43 +4,47 @@ DNN parser is a tool that allows deep neural networks to be instantiated in both
 <br>The proposed version is still being developed and updated, but it allows the instance of the neural network to be created without any problem.
 <br><br>The following sections will describe the organisation of the json to be submitted to the parser, as well as a summary of the codes describing each layer. 
 
+# Download
+Parser execuble can be download from 
+
+
 ## Json structure
 The structure of the configuration json is very simple and requires the following keys <br>
 
 <ul>
-  <strong><li>input_shape</li><br></strong>
-  <strong><li>architecture</li><br></strong>
-  <strong><li>data_format</li><br></strong>
+  <strong><li>input_shape</li></strong><br></strong>
+  <strong><li>architecture</li></strong><br></strong>
+  <strong><li>data_format</li></strong><br></strong>
 </ul>
 
 To the sections listed above (mandatory) the following tags can be added as separate sections. 
 <ul>
-  <li style="font-weight:bold"> convolutional </li>
+  <strong><li> convolutional </li></strong>
   <ul>
-      <li style="font-style:italic">cn</li>
+      <em><li>cn</li></em>
   </ul>
-  <li style="font-weight:bold">kernel</li>
+  <strong><li>kernel</li></strong>
     <ul>
-      <li style="font-style:italic">kn</li>
+      <em><li>kn</li></em>
   </ul>
-  <li style="font-weight:bold">pooling</li>
+  <strong><li>pooling</li></strong>
     <ul>
-      <li style="font-style:italic">pool</li>
+      <em><li>pool</li></em>
   </ul>
-  <li style="font-weight:bold">padding</li>
+  <strong><li>padding</li></strong>
     <ul>
-      <li style="font-style:italic">padding</li>
+      <em><li>padding</li></em>
   </ul>
-  <li style="font-weight:bold">padding_conv</li>
+  <strong><li>padding_conv</li></strong>
     <ul>
-      <li style="font-style:italic">padding_conv</li>
+      <em><li>padding_conv</li></em>
   </ul>
 </ul>
 These are necessary if we have Convolutional or Dense layers contained within the key:value architecture group 
 
 An additional tag may also be added. 
 <ul>
-  <li>skip_connection</li><br>
+  <strong><li>skip_connection</li></strong><br>
 </ul>
 If skip connections are present in the network we have constructed. The structure of this section provides a reference to the numbering of the architecture section. In fact, skip connections involve the connection between one source layer and one target layer. For this reason, the key:value pair, reports the values of the keys that the layer pair has in the architecture section.
 
