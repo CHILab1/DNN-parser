@@ -8,24 +8,39 @@ DNN parser is a tool that allows deep neural networks to be instantiated in both
 The structure of the configuration json is very simple and requires the following keys <br>
 
 <ul>
-  <il>`input_shape`</il><br>
-  <il>`architecture`</il><br>
-  <il>`data_format`</il><br>
+  <li style="font-weight:bold;">input_shape</li><br>
+  <li style="font-weight:bold">architecture</li><br>
+  <li style="font-weight:bold">data_format</li><br>
 </ul>
 
 To the sections listed above (mandatory) the following tags can be added as separate sections. 
 <ul>
-  <il>`convolutional`</il><br>
-  <il>`kernel`</il><br>
-  <il>`pooling`</il><br>
-  <il>`padding`</il><br>
-  <il>`padding_conv`</il><br>
+  <li style="font-weight:bold;"> convolutional </li>
+  <ul>
+      <li style="font-style:italic">cn</li>
+  </ul>
+  <li style="font-weight:bold">kernel</li>
+    <ul>
+      <li style="font-style:italic">kn</li>
+  </ul>
+  <li style="font-weight:bold">pooling</li>
+    <ul>
+      <li style="font-style:italic">pool</li>
+  </ul>
+  <li style="font-weight:bold">padding</li>
+    <ul>
+      <li style="font-style:italic">padding</li>
+  </ul>
+  <li style="font-weight:bold">padding_conv</li>
+    <ul>
+      <li style="font-style:italic">padding_conv</li>
+  </ul>
 </ul>
 These are necessary if we have Convolutional or Dense layers contained within the key:value architecture group 
 
 An additional tag may also be added. 
 <ul>
-  <il>`skip_connection`</il><br>
+  <il>skip_connection</il><br>
 </ul>
 If skip connections are present in the network we have constructed. The structure of this section provides a reference to the numbering of the architecture section. In fact, skip connections involve the connection between one source layer and one target layer. For this reason, the key:value pair, reports the values of the keys that the layer pair has in the architecture section.
 
