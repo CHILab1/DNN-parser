@@ -1,7 +1,21 @@
 # DNN-parser
 DNN parser is a tool that allows deep neural networks to be instantiated in both tensorflow and pytorch framework from a configuration json file. 
 <br>The simplicity of this approach makes the creation of DNNs for training accessible to all. 
-<br>The proposed version is still being developed and updated, but it allows the instance of the neural network to be created without any problem.
+<br>The proposed version is still being developed and updated, and has been published as a pre-print by Salvatore Contino, Luca Cruciata, Orazio Gambino and Roberto Pirrone in the paper 'IODeep: an IOD for the introduction of deep learning in the DICOM standard' available at the following link<br>
+[ArXiv](https://arxiv.org/abs/2311.16163)
+<br>
+Please cite our work as follows if you use the parser 
+```
+ @article{Contino_2024,
+ title={IODeep: an IOD for the introduction of deep learning in the DICOM standard},
+ url={http://arxiv.org/abs/2311.16163}, DOI={10.48550/arXiv.2311.16163}, note={arXiv:2311.16163 [cs, eess]},
+ number={arXiv:2311.16163}, publisher={arXiv},
+ author={Contino, Salvatore and Cruciata, Luca and Gambino, Orazio and Pirrone, Roberto},
+ year={2024},
+ month=jan }
+
+```
+
 <br><br>The following sections will describe the organisation of the json to be submitted to the parser, as well as a summary of the codes describing each layer. 
 
 # Download
@@ -168,8 +182,15 @@ If skip connections are present in the network we have constructed. The structur
 
 
 ## Run parser 
-The executable file for the parser can be downloaded from 
+The executable file for the parser can be downloaded from [cloud](https://cloud.unipa.it/index.php/s/XXG9fntDVrdkJvR)
 
-The following parameters must be used to execute it 
+The following parameters must be used: 
+<li><strong>'-b'</strong> or <strong>'--backend</strong>; <em>to define the backend to be used for creating the network (Tensorflow or Pytorch)</em> </li><br>
+<li><strong>'-n'</strong> or <strong>'--name</strong>; <em>name of the model that will be saved</em></li><br>
+<li><strong>'-j'</strong> or <strong>'--json_file</strong>; <em>string containing the json to be used to compile the network</em> </li><br>
+<li><strong>'-p'</strong> or <strong>'-json_path</strong>; <em>path of the json file</em></li><br>
 
-
+to run the parser the command use the following command:
+```
+main.exe -p Desktop/.../architecture.json -b pytorch -n model_name
+```
