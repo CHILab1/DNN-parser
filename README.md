@@ -19,7 +19,7 @@ Please cite our work as follows if you use the parser
 <br><br>The following sections will describe the organisation of the json to be submitted to the parser, as well as a summary of the codes describing each layer. 
 
 # Download
-Parser execuble can be download from 
+Parser execuble can be download from from [cloud](https://cloud.unipa.it/index.php/s/XXG9fntDVrdkJvR)
 
 
 ## Json structure
@@ -182,7 +182,6 @@ If skip connections are present in the network we have constructed. The structur
 
 
 ## Run parser 
-The executable file for the parser can be downloaded from [cloud](https://cloud.unipa.it/index.php/s/XXG9fntDVrdkJvR)
 
 The following parameters must be used: 
 <li><strong>'-b'</strong> or <strong>'--backend</strong>; <em>to define the backend to be used for creating the network (Tensorflow or Pytorch)</em> </li><br>
