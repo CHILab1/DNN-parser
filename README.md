@@ -191,5 +191,5 @@ The following parameters must be used:
 
 to run the parser the command use the following command:
 ```
-main.exe -p Desktop/.../architecture.json -b pytorch -n model_name
+main.dist/main.exe -p Desktop/.../architecture.json -b pytorch -n model_name
 ```
