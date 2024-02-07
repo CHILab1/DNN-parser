@@ -1,0 +1,76 @@
+{
+    "input_shape": {
+        "input_shape0": 224,
+        "input_shape1": 224,
+        "input_shape2": 3,
+        "label_shape": 1
+    },
+    "architecture": {
+        "1": "doubleConv",
+        "2": "Maxpool2d",
+        "3": "doubleConv",
+        "4": "Maxpool2d",
+        "5": "doubleConv",
+        "6": "Maxpool2d",
+        "7": "doubleConv",
+        "8": "Maxpool2d",
+        "9": "ElbowUNet",
+        "10": "Upsample",
+        "11": "UpDoubleConv",
+        "12": "Upsample",
+        "13": "UpDoubleConv",
+        "14": "Upsample",
+        "15": "UpDoubleConv",
+        "16": "Upsample",
+        "17": "UpDoubleConv_out",
+        "18": "cnn2d"
+    },
+    "convolutional": {
+        "cn1": 64,
+        "cn2": 128,
+        "cn3": 256,
+        "cn4": 512,
+        "cn5": 1024,
+        "cn6": 512,
+        "cn7": 256,
+        "cn8": 128,
+        "cn9": 64, 
+        "cn10": 1
+    },
+    "kernel": {
+        "kernel1": 3,
+        "kernel2": 3,
+        "kernel3": 3,
+        "kernel4": 3,
+        "kernel5": 3,
+        "kernel6": 3,
+        "kernel7": 3,
+        "kernel8": 3,
+        "kernel9": 3,
+        "kernel10": 1
+    },
+    "pooling": {
+        "pool1": 2,
+        "pool2": 2,
+        "pool3": 2,
+        "pool4": 2
+    },
+    "stride": {
+        "stride": 1
+    },
+    "padding": {
+        "padding": 1
+    },
+    "padding_conv":{
+        "padding_conv": 0
+    },
+    "skip_connection": {
+        "1": "16",
+        "3": "14",
+        "5": "12",
+        "7": "10"
+    },
+    "data_format": {
+        "data_format":"channels_last"
+    }
+}
