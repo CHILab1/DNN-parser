@@ -29,6 +29,7 @@ The structure of the configuration json is very simple and requires the followin
   <strong><li>input_shape</li></strong><br></strong>
   <strong><li>architecture</li></strong><br></strong>
   <strong><li>data_format</li></strong><br></strong>
+  <strong><li>backend</li></strong><br></strong>
 </ul>
 
 To the sections listed above (mandatory) the following tags can be added as separate sections. 
@@ -143,6 +144,9 @@ If skip connections are present in the network we have constructed. The structur
     },
     "data_format": {
         "data_format":"channels_last"
+    },
+    "backend":{
+        "backend":"pytorch"
     }
 }
 ```
