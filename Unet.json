@@ -72,5 +72,9 @@
     },
     "data_format": {
         "data_format":"channels_last"
+    },
+    "backend":{
+        "backend":"pytorch"
     }
+    
 }
